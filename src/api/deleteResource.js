@@ -1,8 +1,12 @@
 import { BASE_URL } from "../constants/constants";
 async function deleteResource(endpoint='', id)
 {
-    console.log(BASE_URL+endpoint+id);
-    return (await fetch(BASE_URL+endpoint+id, { method: 'DELETE' }))
+    try{
+        return (await fetch(BASE_URL+endpoint+id, { method: 'DELETE' }));
+    }catch(err){
+        throw new Error(err);
+    }
+
 }
 
 export default deleteResource;

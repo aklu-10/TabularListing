@@ -1,6 +1,10 @@
 const getResource = async (url) =>
 {
-    return (await fetch(url)).json()
+    try{
+        return (await fetch(url)).json();
+    }catch(err){
+        throw new Error(err);
+    }
 }
 
 export default getResource;

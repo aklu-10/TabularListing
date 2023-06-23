@@ -17,7 +17,6 @@ const Delete = ({delId}) => {
       }
       else if(e==='yes')
       {
-
         const deleteData = async () =>
         {
           return deleteResource('/users/',delId);

@@ -11,14 +11,13 @@ const Table = ({list}) => {
         (
             <td>
             {
-                (typeof obj[keyItem]==='object') ? generateFields(obj[keyItem]) : obj[keyItem]+''
+                (typeof obj[keyItem]==='object') ? generateFields(obj[keyItem]) : (typeof obj[keyItem] === 'string' && obj[keyItem].match(/jpg|jpeg|png|bmp|webp/)) ? <img src={obj[keyItem]} width={20}/> : obj[keyItem]+''
             }
             </td>
         ))
     }
 
   return (
-
         <table style={{width:'100%'}}>
 
             <TableRow>
@@ -26,9 +25,12 @@ const Table = ({list}) => {
                 list.length!=0 &&
                 Object.keys(list[0]).map((item, index)=>{
 
-                    return <th key={index}>{item}</th>
+                    return (
+                        <th key={index}>{item}</th>
+                    )
                 })                    
             }
+                <th colSpan={2}>Action</th>
             </TableRow>
 
             <tbody>
@@ -50,4 +52,4 @@ const Table = ({list}) => {
   )
 }
 
-export default Table
+export default Table;
