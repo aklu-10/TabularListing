@@ -1,0 +1,67 @@
+.cofirmationContainer
+{
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cofirmationContainer .cofirmation
+{
+    width:35%;
+    height: 150px;
+    padding:10px;
+    background-color: #e26a9b;
+    color:white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0 0 4px lightgray;
+}
+
+.cofirmationContainer .cofirmation p
+{
+    padding:10px 10px;
+    font-size:1.1rem;
+    font-weight: bold;
+}
+
+
+.cofirmationContainer .cofirmation .btnGroup
+{
+    width:80%;  
+    padding:10px 0;
+}
+
+.cofirmationContainer .cofirmation .btnGroup button
+{
+    margin:0 10px;
+    padding:8px 20px;
+    cursor: pointer;
+}
+
+.cofirmationContainer .cofirmation .btnGroup button.btnNo
+{
+    background-color: red;
+    color:white;
+    border:none;
+    font-weight: bold;
+}
+
+.cofirmationContainer .cofirmation .btnGroup button.btnYes
+{
+    background-color: #687ce1;
+    color:white;
+    font-weight: bold;
+    border:none;
+    
+}
+

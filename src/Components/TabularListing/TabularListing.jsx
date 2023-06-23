@@ -14,7 +14,13 @@ const TabularListing = ({api}) => {
         }
 
         getData()
-        .then(res=>setList(res[Object.keys(res)[0]]))
+        .then(res=>
+        {   
+            if(Array.isArray(res))
+                return setList(res)
+            else
+                return setList(res[Object.keys(res)[0]])
+        })
         .catch(err=>{throw new Error(err)});
 
     },[]);

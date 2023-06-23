@@ -1,12 +1,13 @@
 import React from 'react'
 import TabularListing from './Components/TabularListing/TabularListing'
+import './App.css';
 
 const App = () => {
 
   return (
     <>
       <TabularListing 
-        api={'https://dummyjson.com/users'} // get request
+        api={'http://localhost:8000/users'} // get request
         />
         {/* address": 
         {
